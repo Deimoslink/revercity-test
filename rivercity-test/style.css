@@ -1,0 +1,190 @@
+body {
+  min-width: 960px; }
+
+#content::-webkit-scrollbar, .navigation-field::-webkit-scrollbar {
+  width: 5px;
+  height: 5px; }
+
+#content::-webkit-scrollbar-thumb, .navigation-field::-webkit-scrollbar-thumb {
+  border-width: 1px 1px 1px 2px;
+  border-color: #777;
+  background-color: #aaa; }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 20px; }
+
+li {
+  padding: 5px; }
+
+span {
+  cursor: pointer; }
+
+#file-content {
+  display: none; }
+
+.navigation-panel {
+  background-color: #333;
+  color: white;
+  width: 33.33333%;
+  float: left;
+  padding: 40px 20px;
+  height: 100vh; }
+
+.view-panel {
+  height: 100vh; }
+
+#content {
+  height: calc(100vh - 120px);
+  overflow: auto; }
+
+.navigation-field {
+  max-height: 90vh;
+  overflow: auto;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+li.selected {
+  background-color: #157efb; }
+
+li.selected ul {
+  background-color: #333; }
+
+.view-panel {
+  width: 66.66667%;
+  float: left;
+  height: 100vh; }
+
+.file span, .folder span, .folder-open span {
+  margin-left: 5px;
+  line-height: 20px; }
+
+.file span::before, .folder span::before, .folder-open span::before {
+  content: "";
+  float: left;
+  height: 19px;
+  width: 24px;
+  background: url(icons.png) no-repeat;
+  cursor: pointer; }
+
+#root {
+  padding: 0; }
+
+.folder > span::before {
+  background-position: 0px -206px; }
+
+.file > span::before {
+  width: 15px;
+  background-position: 0px -244px; }
+
+.folder-open > span::before {
+  background-position: 0px -225px;
+  width: 27px; }
+
+.folder-open > span:hover::before {
+  background-position: -53px -225px;
+  width: 27px; }
+
+.folder > span:hover::before {
+  background-position: -47px -206px; }
+
+.folder-open.selected > span::before {
+  background-position: -26px -225px; }
+
+.folder.selected > span::before {
+  background-position: -23px -206px; }
+
+.file.selected > span::before {
+  background-position: -15px -244px; }
+
+.sav {
+  float: right;
+  display: none;
+  margin-left: 20px;
+  padding: 0;
+  width: 27px;
+  height: 27px;
+  border: none;
+  background: url(icons.png) no-repeat;
+  background-position: 0px -150px; }
+  .sav:focus {
+    outline: none; }
+
+.del {
+  display: none;
+  float: right;
+  margin-left: 20px;
+  padding: 0;
+  width: 22px;
+  height: 27px;
+  border: none;
+  background: url(icons.png) no-repeat;
+  background-position: 0px -177px; }
+  .del:focus {
+    outline: none; }
+
+.description-group {
+  float: left;
+  width: 100%;
+  padding: 20px 50px; }
+
+.description-group div.left {
+  float: left;
+  width: 85%; }
+
+.description-group div.right {
+  float: right;
+  width: 15%; }
+
+#content {
+  padding: 20px 0px 0px 50px;
+  margin-right: 50px; }
+
+#name {
+  width: 100%;
+  border: none;
+  padding: 0;
+  height: 27px;
+  font-size: 27px; }
+
+#info {
+  display: inline-block;
+  margin-top: 10px;
+  color: #AAA; }
+
+.create-folder {
+  display: none;
+  float: left;
+  padding: 0;
+  margin-left: 150px;
+  margin-top: 150px;
+  width: 96px;
+  height: 74px;
+  border: none;
+  background: url(icons.png) no-repeat;
+  background-position: 0px 0px; }
+  .create-folder:focus {
+    outline: none; }
+  .create-folder:hover {
+    background-position: -97px 0px; }
+
+.create-file {
+  display: none;
+  float: right;
+  padding: 0;
+  margin-right: 150px;
+  margin-top: 150px;
+  width: 60px;
+  height: 76px;
+  border: none;
+  background: url(icons.png) no-repeat;
+  background-position: 0px -74px; }
+  .create-file:focus {
+    outline: none; }
+  .create-file:hover {
+    background-position: -61px -74px; }
